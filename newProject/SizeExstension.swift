@@ -1,8 +1,15 @@
-//
-//  SizeExstension.swift
-//  newProject
-//
-//  Created by  aleksandr on 27.09.22.
-//
+import UIKit
 
-import Foundation
+extension CGFloat {
+
+    static func getRandomSize(maxValue: CGFloat) -> CGFloat {
+        .random(in: 1...maxValue)
+    }
+    
+    static func getRandomCoordinates(
+        maxX: CGFloat,
+        maxY: CGFloat
+    ) -> (CGFloat, CGFloat) {
+        (.random(in: 0...maxY), .random(in: 0...maxX))
+    }
+}
